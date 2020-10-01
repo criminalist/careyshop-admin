@@ -1,0 +1,8 @@
+// v-charts 样式补丁
+.v-charts-data-empty {
+  color: $color-text-sub !important;
+}
+
+.v-charts-component-loading .path {
+  stroke: $color-primary !important;
+}
