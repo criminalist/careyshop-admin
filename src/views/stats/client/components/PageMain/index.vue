@@ -28,7 +28,11 @@
             <span>趋势</span>
           </div>
 
-          <ve-line :data="loginData" :colors="colors" :settings="chartSettings"/>
+          <ve-line
+            :data="loginData"
+            :colors="colors"
+            :settings="chartSettings"
+            :data-empty="!loginData.rows.length"/>
         </el-card>
       </el-col>
 
@@ -38,7 +42,10 @@
             <span>会员等级</span>
           </div>
 
-          <ve-pie :data="levelData" :colors="colors"/>
+          <ve-pie
+            :data="levelData"
+            :colors="colors"
+            :data-empty="!levelData.rows.length"/>
         </el-card>
       </el-col>
     </el-row>
@@ -47,6 +54,7 @@
 
 <script>
 import colors from '@/plugin/careyshop/charts'
+import 'v-charts/lib/style.css'
 
 export default {
   components: {

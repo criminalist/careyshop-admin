@@ -7,7 +7,6 @@
         @submit="handleSubmit"/>
 
     <page-main
-        :loading="loading"
         :today-data="todayData"
         :chart-data="chartData"
         :top-data="topData"

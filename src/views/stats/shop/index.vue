@@ -33,7 +33,8 @@
             <ve-histogram
               :data="orderHoursData"
               :colors="colors"
-              :settings="{labelMap: {today: '今天', yesterday: '昨天'}}"/>
+              :settings="{labelMap: {today: '今天', yesterday: '昨天'}}"
+              :data-empty="!orderHoursData.rows.length"/>
           </el-card>
         </el-col>
 
@@ -76,7 +77,8 @@
         <ve-line
           :data="orderMonthData"
           :colors="colors"
-          :settings="{labelMap: {count: '订单量合计'}}"/>
+          :settings="{labelMap: {count: '订单量合计'}}"
+          :data-empty="!orderMonthData.rows.length"/>
       </el-card>
 
       <el-card class="box-card cs-mt" shadow="never">
@@ -87,7 +89,8 @@
         <ve-histogram
           :data="clientMonthData"
           :colors="colors"
-          :settings="{labelMap: {count: '会员数合计'}}"/>
+          :settings="{labelMap: {count: '会员数合计'}}"
+          :data-empty="!clientMonthData.rows.length"/>
       </el-card>
     </div>
   </cs-container>
@@ -96,6 +99,7 @@
 <script>
 import { getStatsData } from '@/api/aided/stats'
 import colors from '@/plugin/careyshop/charts'
+import 'v-charts/lib/style.css'
 
 export default {
   name: 'stats-data-shop',

@@ -28,7 +28,11 @@
             <span>趋势</span>
           </div>
 
-          <ve-line :data="chartData" :colors="colors" :settings="chartSettings"/>
+          <ve-line
+            :data="chartData"
+            :colors="colors"
+            :settings="chartSettings"
+            :data-empty="!chartData.rows.length"/>
         </el-card>
       </el-col>
 
@@ -67,6 +71,7 @@
 
 <script>
 import colors from '@/plugin/careyshop/charts'
+import 'v-charts/lib/style.css'
 
 export default {
   components: {

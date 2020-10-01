@@ -52,20 +52,24 @@
           <i class="el-icon-collection-tag cs-pb">
             <span class="cs-pl-5">今日订单量</span>
           </i>
+
           <ve-line
             :data="orderToday"
             :colors="colors"
-            :settings="{labelMap: {count: '订单量合计'}}"/>
+            :settings="{labelMap: {count: '订单量合计'}}"
+            :data-empty="!orderToday.rows.length"/>
         </div>
 
         <div class="cs-card">
           <i class="el-icon-collection-tag cs-pb">
             <span class="cs-pl-5">今日活跃会员</span>
           </i>
+
           <ve-line
             :data="clientActive"
             :colors="colors"
-            :settings="{labelMap: {count: '活跃数合计'}}"/>
+            :settings="{labelMap: {count: '活跃数合计'}}"
+            :data-empty="!clientActive.rows.length"/>
         </div>
 
         <el-table
@@ -172,14 +176,21 @@
           <i class="el-icon-collection-tag cs-pb">
             <span class="cs-pl-5">订单来源</span>
           </i>
-          <ve-pie :data="orderSource" :colors="colors"/>
+          <ve-pie
+            :data="orderSource"
+            :data-empty="!orderSource.rows.length"
+            :colors="colors"/>
         </div>
 
         <div class="cs-card">
           <i class="el-icon-collection-tag cs-pb">
             <span class="cs-pl-5">会员等级</span>
           </i>
-          <ve-ring :data="clientLevel" :colors="colors"/>
+
+          <ve-ring
+            :data="clientLevel"
+            :data-empty="!clientLevel.rows.length"
+            :colors="colors"/>
         </div>
       </el-col>
     </el-row>
@@ -189,6 +200,7 @@
 <script>
 import { getStatsData } from '@/api/aided/stats'
 import colors from '@/plugin/careyshop/charts'
+import 'v-charts/lib/style.css'
 
 export default {
   components: {
