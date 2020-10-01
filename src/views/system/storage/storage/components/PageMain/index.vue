@@ -418,7 +418,7 @@ export default {
     },
     // 切换目录
     switchFolder(storageId) {
-      this.$emit('clearName')
+      this.$emit('clear-name')
       this.$emit('refresh', storageId, true)
     },
     // 打开资源

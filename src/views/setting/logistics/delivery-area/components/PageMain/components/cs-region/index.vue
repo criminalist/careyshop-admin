@@ -96,7 +96,10 @@ export default {
     },
     // 移除一个区域
     handleClose(tag) {
-      this.value.splice(this.value.indexOf(tag), 1)
+      let data = [...this.value]
+      data.splice(this.value.indexOf(tag), 1)
+
+      this.$emit('input', data)
     },
     // 动态加载节点
     loadNode(node, resolve) {
@@ -117,10 +120,10 @@ export default {
         return
       }
 
-      this.value.push({
-        name: value.region_name,
-        region_id: value.region_id
-      })
+      let data = [...this.value]
+      data.push({ name: value.region_name, region_id: value.region_id })
+
+      this.$emit('input', data)
     },
     // 修改所辖区域
     update() {

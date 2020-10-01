@@ -22,7 +22,7 @@ export default {
       while (!target.dataset.value) {
         target = target.parentNode
       }
-      this.$emit('rowClick', target.dataset.value)
+      this.$emit('row-click', target.dataset.value)
     }
   }
 }

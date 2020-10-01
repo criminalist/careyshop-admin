@@ -8,7 +8,7 @@
           :y="contentmenuY">
           <cs-contextmenu-list
             :menulist="tagName === '/index' ? contextmenuListIndex : contextmenuList"
-            @rowClick="contextmenuClick"/>
+            @row-click="contextmenuClick"/>
         </cs-contextmenu>
         <el-tabs
           class="cs-multiple-page-control cs-multiple-page-sort"

@@ -12,7 +12,7 @@
       :navi-data="navi"
       :storage-id="storageId"
       @refresh="handleRefresh"
-      @clearName="handleClearName"/>
+      @clear-name="handleClearName"/>
 
     <page-footer
       slot="footer"

@@ -194,7 +194,7 @@
               <el-col :span="12">
                 <el-form-item
                   label="模块">
-                  <el-radio-group v-model="module" size="small">
+                  <el-radio-group :value="module" size="small">
                     <el-radio-button
                       v-for="(name, index) in treeModule"
                       :key="index"

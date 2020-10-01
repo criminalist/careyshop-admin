@@ -14,7 +14,7 @@
 
           <el-col :span="6">
             <el-rate
-              v-model="tableData.score"
+              :value="tableData.score"
               :disabled="true"
               :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
             </el-rate>
@@ -300,7 +300,7 @@ export default {
   },
   props: {
     tableData: {
-      default: () => []
+      default: () => {}
     }
   },
   data() {
