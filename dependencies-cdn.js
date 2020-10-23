@@ -14,7 +14,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'vue-router',
       library: 'VueRouter',
-      js: 'https://cdn.jsdelivr.net/npm/vue-router@3.4.6/dist/vue-router.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/vue-router@3.4.7/dist/vue-router.min.js',
       css: ''
     },
     {
@@ -32,7 +32,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'better-scroll',
       library: 'BetterScroll',
-      js: 'https://cdn.jsdelivr.net/npm/better-scroll@2.0.4/dist/better-scroll.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/better-scroll@2.0.5/dist/better-scroll.min.js',
       css: ''
     },
     {
@@ -44,13 +44,13 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'dayjs',
       library: 'dayjs',
-      js: 'https://cdn.jsdelivr.net/npm/dayjs@1.9.1/dayjs.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/dayjs@1.9.4/dayjs.min.js',
       css: ''
     },
     {
       name: 'fuse.js',
       library: 'Fuse',
-      js: 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.1/dist/fuse.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.2/dist/fuse.min.js',
       css: ''
     },
     {
@@ -92,7 +92,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'vuedraggable',
       library: 'vuedraggable',
-      js: 'https://cdn.jsdelivr.net/npm/vuedraggable@2.24.1/dist/vuedraggable.umd.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/vuedraggable@2.24.2/dist/vuedraggable.umd.min.js',
       css: ''
     },
     {
